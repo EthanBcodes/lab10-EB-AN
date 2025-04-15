@@ -7,6 +7,17 @@ from calculator import multiply, div, logarithm, hypotenuse, square_root
 
 
 class TestCalculator(unittest.TestCase):
+    ######## Partner 2
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-2, 5), 3)
+        self.assertEqual(add(0, 7), 7)
+
+    def test_subtract(self):
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(3, 5), -2)
+        self.assertEqual(subtract(7, 0), 7)
+
     ######## Partner 1
     def test_multiply(self):
         self.assertEqual(multiply(3, 4), 12)
@@ -18,6 +29,22 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(div(5, 20), 4)
         self.assertAlmostEqual(div(3, 10), 10 / 3, places=5)
 
+    ######## Partner 2
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            div(10, 0)
+
+    def test_logarithm(self):
+        self.assertEqual(log(2, 8), 3)
+        self.assertEqual(log(10, 1), 0)
+        with self.assertRaises(ValueError):
+            log(10, -5)
+
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            log(1, 10)
+
+    ######## Partner 1
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             logarithm(0, 5)
@@ -32,8 +59,6 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(square_root(0), 0.0)
         with self.assertRaises(ValueError):
             square_root(-1)
-
-    ##########################
 
 
 if __name__ == "__main__":
