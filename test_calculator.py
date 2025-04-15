@@ -3,7 +3,7 @@
 # Partner 2: An Ngo
 
 import unittest
-from calculator import multiply, div, logarithm, hypotenuse, square_root
+from calculator import div, logarithm, hypotenuse, square_root
 
 
 class TestCalculator(unittest.TestCase):
@@ -20,9 +20,9 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
     def test_multiply(self):
-        self.assertEqual(multiply(3, 4), 12)
-        self.assertEqual(multiply(-2, 5), -10)
-        self.assertEqual(multiply(0, 100), 0)
+        self.assertEqual(mul(3, 4), 12)
+        self.assertEqual(mul(-2, 5), -10)
+        self.assertEqual(mul(0, 100), 0)
 
     def test_divide(self):
         self.assertEqual(div(2, 10), 5)
