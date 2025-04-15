@@ -1,3 +1,7 @@
+# https://github.com/EthanBcodes/lab10-EB-AN
+# Partner 1: Ethan Bond
+# Partner 2: An Ngo
+
 import unittest
 from calculator import *
 
