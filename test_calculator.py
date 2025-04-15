@@ -3,7 +3,7 @@
 # Partner 2: An Ngo
 
 import unittest
-from calculator import div, logarithm, hypotenuse, square_root
+from calculator import mul, div, logarithm, hypotenuse, square_root, add, subtract, log
 
 
 class TestCalculator(unittest.TestCase):
