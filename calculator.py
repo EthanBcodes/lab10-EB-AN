@@ -22,12 +22,9 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    try:
-        if a == 0:
-            raise ZeroDivisionError("Cannot divide by zero")
-        return b / a
-    except ZeroDivisionError as e:
-        print(f"Caught an error: {e}")
+    if a == 0:
+        raise ZeroDivisionError("Cannot divide by zero")
+    return b / a
 
 def logarithm(a, b):
     if a <= 0 or b <= 0 or a == 1:
