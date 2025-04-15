@@ -3,7 +3,7 @@
 # Partner 2: An Ngo
 
 import unittest
-from calculator import mul, div, logarithm, hypotenuse, square_root, add, subtract, log
+from calculator import mul, div, logarithm, hypotenuse, square_root, add, subtract
 
 
 class TestCalculator(unittest.TestCase):
@@ -38,11 +38,11 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(log(2, 8), 3)
         self.assertEqual(log(10, 1), 0)
         with self.assertRaises(ValueError):
-            log(10, -5)
+            logarithm(10, -5)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            log(1, 10)
+            logarithm(1, 10)
 
     ######## Partner 1
     def test_log_invalid_argument(self):
